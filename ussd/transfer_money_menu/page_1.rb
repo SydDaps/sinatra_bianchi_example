@@ -18,7 +18,7 @@ module USSD
 
         next_menu = option_menus[session_input_body]
 
-        return render_and_await("invalid input \n#{message}") unless next_menu.present?
+        render_and_await("invalid input \n#{message}") unless next_menu.present?
 
         if session_input_body == '1'
           session.store.set('selected_network', 'momo')

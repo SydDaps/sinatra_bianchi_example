@@ -8,7 +8,7 @@ module USSD
       end
 
       def response
-        return render_and_await 'numbers do not match re enter' unless recipients_number_matches? session_input_body
+        render_and_await 'numbers do not match re enter' unless recipients_number_matches? session_input_body
 
         redirect_to_next_page
       end

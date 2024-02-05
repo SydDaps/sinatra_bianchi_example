@@ -8,11 +8,11 @@ module USSD
       end
 
       def response
-        return redirect_to_transfer_money_menu_page_1 if session_input_body == '0'
+        redirect_to_transfer_money_menu_page_1 if session_input_body == '0'
 
         selected_network = option_menus[session_input_body]
 
-        return render_and_await("invalid input \n#{message}") unless next_menu.present?
+        render_and_await("invalid input \n#{message}") unless next_menu.present?
 
         session.store.set('selected_network', selected_network)
 

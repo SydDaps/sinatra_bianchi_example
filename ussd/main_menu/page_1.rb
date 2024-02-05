@@ -19,7 +19,7 @@ module USSD
 
         next_menu = option_menus[session_input_body]
 
-        return render_and_await("invalid input \n#{message}") unless next_menu.present?
+        render_and_await("invalid input \n#{message}") unless next_menu.present?
 
         send("redirect_to_#{next_menu}_menu_page_1")
       end

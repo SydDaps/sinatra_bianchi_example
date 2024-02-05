@@ -10,8 +10,12 @@ gem 'sinatra-contrib'
 gem 'thin'
 gem 'webrick'
 
-gem 'bianchi', path: '/Users/sydneydapilah/workspace/ruby/bianchi'
+# gem 'bianchi', path: '/Users/sydneydapilah/workspace/ruby/bianchi'
 
 gem 'activesupport', '~> 7.1'
 
 gem 'phonelib', '~> 0.8.7'
+
+gem "bianchi", "~> 0.1.2"
+
+gem 'dotenv', '~> 2.8'

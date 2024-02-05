@@ -10,7 +10,7 @@ module USSD
       def response
         recipients_number = session_input_body
 
-        return render_and_await("invalid number \n#{message}") unless valid_mobile_number? recipients_number
+        render_and_await("invalid number \n#{message}") unless valid_mobile_number? recipients_number
 
         session.store.set('recipients_number', recipients_number)
 
